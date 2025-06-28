@@ -4,7 +4,7 @@
     Description: Enhanced dashboard widget with server information, AJAX refresh, and JSON export capabilities for support teams.
     Author: Dan Simeone
     Author URI: https://gestaltcreations.com/
-    Version: 1.5.2.1
+    Version: 1.5.3
     Text Domain: gc-support-info
     */
 ?>
@@ -251,7 +251,7 @@ function gc_support_info_enqueue_scripts($hook) {
         return;
     }
     
-    wp_enqueue_script('gc-support-info-js', plugin_dir_url(__FILE__) . 'gc-support-info.js', array('jquery'), '1.5.2.1', true);
+    wp_enqueue_script('gc-support-info-js', plugin_dir_url(__FILE__) . 'gc-support-info.js', array('jquery'), '1.5.3', true);
     wp_localize_script('gc-support-info-js', 'gc_support_info_ajax', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('gc_support_info_nonce')
