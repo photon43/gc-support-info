@@ -25,6 +25,19 @@
     
     // Enable GitHub release assets for downloading
     $myUpdateChecker->getVcsApi()->enableReleaseAssets();
+    
+    // Configure plugin icons and banners
+    $myUpdateChecker->addResultFilter(function($pluginInfo, $httpResult = null) {
+        $pluginInfo->icons = array(
+            '1x' => 'https://raw.githubusercontent.com/photon43/gc-support-info/main/assets/icon-128x128.png',
+            '2x' => 'https://raw.githubusercontent.com/photon43/gc-support-info/main/assets/icon-256x256.png'
+        );
+        $pluginInfo->banners = array(
+            'low' => 'https://raw.githubusercontent.com/photon43/gc-support-info/main/assets/banner-772x250.png',
+            'high' => 'https://raw.githubusercontent.com/photon43/gc-support-info/main/assets/banner-1544x500.png'
+        );
+        return $pluginInfo;
+    });
 ?>
 <?php
 // Retrieve Server Information
