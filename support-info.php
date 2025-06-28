@@ -1,7 +1,7 @@
 <?php
     /*
     Plugin Name: GC Support Info
-    Description: A Simple Dashboard Widget with Relevant Server Information
+    Description: Enhanced dashboard widget with server information, AJAX refresh, and JSON export capabilities for support teams.
     Author: Dan Simeone
     Author URI: https://gestaltcreations.com/
     Version: 1.5.2.1
